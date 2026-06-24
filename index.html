@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishmoji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Phishmoji</h1>
+        
+        <div id="emoji-display" style="font-size: 4rem; margin: 20px 0;">🐠🎶❓</div>
+        
+        <input type="text" id="guess-input" placeholder="Name that tune...">
+        <button id="guess-btn">Guess</button>
+        <button id="skip-btn">Skip</button>
+        <button id="next-btn" style="display: none;">Next Song</button>
+        
+        <p id="message"></p>
+        
+        <p>Current Streak: <span id="score">0</span></p>
+        <button id="share-btn" style="display: none;">Share Streak 📱</button>
+        
+        <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
