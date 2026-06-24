@@ -356,7 +356,9 @@ const shareButton = document.getElementById('share-btn');
 
 // Game State Variables
 let currentSong = null;
-let currentStreak = 0; 
+let currentStreak = 0;
+let highScore = parseInt(localStorage.getItem('phishmojiHighScore')) || 0;
+document.getElementById('high-score').textContent = highScore;
 
 // 2. Load a random song
 function loadNewSong() {
@@ -395,7 +397,15 @@ function checkGuess() {
   if (currentSong.aliases.includes(userGuess)) {
     // CORRECT GUESS
     currentStreak++; 
-    scoreDisplay.textContent = currentStreak;
+    document.getElementById('streak').textContent = currentStreak;
+
+    // --- ADD THIS BLOCK ---
+    if (currentStreak > highScore) {
+      highScore = currentStreak;
+      localStorage.setItem('phishmojiHighScore', highScore);
+      document.getElementById('high-score').textContent = highScore;
+    }
+    // ----------------------
 
     messageDisplay.textContent = `Correct! The song was "${currentSong.title}".`;
     messageDisplay.style.color = '#2e7d32'; // Green
@@ -433,7 +443,7 @@ function checkGuess() {
 // 4. Skip functionality
 function skipSong() {
     currentStreak = 0; 
-    scoreDisplay.textContent = currentStreak;
+    document.getElementById('streak').textContent = currentStreak; // Changed from scoreDisplay
     shareButton.style.display = 'none';
     loadNewSong();
 }
