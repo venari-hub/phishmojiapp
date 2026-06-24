@@ -2,6 +2,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -90,9 +91,18 @@ p {
 }
 
 /* Detach the suggestion form from the game card */
+/* Detach the suggestion form into its own bubble */
 .suggestion-container {
-    margin-top: 30px;
-    padding-top: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    margin-top: 10px; /* Space between the two bubbles */
+    margin-bottom: 20px; 
+    box-sizing: border-box;
 }
 
 /* --- ANIMATION CLASSES --- */
