@@ -1,4 +1,4 @@
-/* The famous Fishman Donut Background pattern drawn entirely in CSS! */
+/* The famous Fishman Donut Background pattern (Hollow Circles) */
 body {
     font-family: 'Nunito', sans-serif;
     display: flex;
@@ -8,8 +8,8 @@ body {
     margin: 0;
     background-color: #1a567b; /* Deep Cyan/Blue */
     background-image: 
-        radial-gradient(circle at center, #d83b4e 18%, transparent 19%), 
-        radial-gradient(circle at center, #d83b4e 18%, transparent 19%);
+        radial-gradient(circle at center, transparent 12%, #d83b4e 14%, #d83b4e 25%, transparent 27%), 
+        radial-gradient(circle at center, transparent 12%, #d83b4e 14%, #d83b4e 25%, transparent 27%);
     background-size: 80px 80px;
     background-position: 0 0, 40px 40px;
 }
