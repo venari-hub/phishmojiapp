@@ -397,6 +397,14 @@ function checkGuess() {
     currentStreak++; 
     document.getElementById('streak').textContent = currentStreak;
 
+    // --- ADDED: Analytics Tracking (Correct Guess) ---
+    if (window.umami) {
+        umami.track('Correct Guess', { 
+            song: currentSong.title, 
+            streak: currentStreak 
+        });
+    }
+
     // Check High Score
     if (currentStreak > highScore) {
       highScore = currentStreak;
@@ -441,6 +449,13 @@ function checkGuess() {
 
 // 4. Skip functionality
 function skipSong() {
+    // --- ADDED: Analytics Tracking (Skip Song) ---
+    if (window.umami) {
+        umami.track('Skip Song', { 
+            song: currentSong.title 
+        });
+    }
+
     currentStreak = 0; 
     document.getElementById('streak').textContent = currentStreak;
     shareButton.style.display = 'none';
@@ -492,6 +507,13 @@ const formEndpoint = "https://formspree.io/f/xbdvdpvj";
 
 submitForm.addEventListener('submit', async function(event) {
     event.preventDefault();
+
+    // --- ADDED: Analytics Tracking (Suggestion Submitted) ---
+    if (window.umami) {
+        umami.track('Suggestion Submitted', {
+            suggestedSong: suggestSongInput.value
+        });
+    }
 
     const formData = new FormData();
     formData.append('Song Title', suggestSongInput.value);
