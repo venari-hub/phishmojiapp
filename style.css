@@ -125,3 +125,28 @@ p {
     30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
     40%, 60% { transform: translate3d(6px, 0, 0); }
 }
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+    .game-container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #emoji-display {
+        font-size: 3rem !important; /* Slightly smaller emojis for mobile */
+    }
+
+    input, button {
+        width: 100% !important; /* Stack inputs/buttons on mobile */
+        margin: 5px 0 !important;
+        box-sizing: border-box;
+    }
+
+    #submit-form input {
+        width: 100% !important;
+    }
+}
