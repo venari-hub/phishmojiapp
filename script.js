@@ -440,7 +440,7 @@ const songData = [
   { "title": "No Quarter", "aliases": ["no quarter"], "emojis": ["🚫🪙", "🐕❄️⚔️"] },
   { "title": "Rise/Come Together", "aliases": ["rise/come together", "rise come together"], "emojis": ["⬆️🤝"] },
   { "title": "Light Up Or Leave Me Alone", "aliases": ["light up or leave me alone", "luolma"], "emojis": ["💡🔥🏃‍♂️"] }
-];
+]
 
 // 1. Grab the HTML elements
 const gameContainer = document.querySelector('.game-container');
