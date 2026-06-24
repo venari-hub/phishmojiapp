@@ -12,7 +12,6 @@
         <h1>Phishmoji</h1>
         
         <p style="margin: 10px 0;">Current Streak: <span id="streak">0</span></p>
-        
         <div id="emoji-display" style="font-size: 4rem; margin: 20px 0;">🐠🎶❓</div>
         
         <input type="text" id="guess-input" placeholder="Name that tune...">
@@ -27,16 +26,14 @@
             <hr style="margin: 30px 0; border: 0; border-top: 2px solid #eee;">
             <p style="font-size: 0.9rem; color: #666;">Longest Streak: <span id="high-score">0</span></p>
         </div>
-
-        <div class="suggestion-container">
-            <p style="font-size: 1rem; margin-bottom: 10px; color: #444;">Got a better emoji combo?</p>
-            <form id="submit-form">
-                <input type="text" id="suggest-song" placeholder="Song Title" required style="width: 45%; font-size: 0.9rem;">
-                <input type="text" id="suggest-emoji" placeholder="Emojis" required style="width: 40%; font-size: 0.9rem;">
-                <button type="submit" id="submit-idea-btn" style="background-color: #2e7d32; font-size: 0.9rem; display: block; width: 90%; margin: 10px auto;">Send Suggestion</button>
-            </form>
-            <p id="form-status" style="font-size: 0.9rem; color: #2e7d32; display: none;">Thanks for the idea!</p>
-        </div>
+    </div> <div class="suggestion-container">
+        <p style="font-size: 1rem; margin-bottom: 10px; color: #444;">Got a better emoji combo?</p>
+        <form id="submit-form">
+            <input type="text" id="suggest-song" placeholder="Song Title" required style="width: 45%; font-size: 0.9rem;">
+            <input type="text" id="suggest-emoji" placeholder="Emojis" required style="width: 40%; font-size: 0.9rem;">
+            <button type="submit" id="submit-idea-btn" style="background-color: #2e7d32; font-size: 0.9rem; display: block; width: 90%; margin: 10px auto;">Send Suggestion</button>
+        </form>
+        <p id="form-status" style="font-size: 0.9rem; color: #2e7d32; display: none;">Thanks for the idea!</p>
     </div>
 
     <script src="script.js"></script>
