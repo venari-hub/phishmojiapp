@@ -2,12 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Link Preview and Social Share Info -->
     <title>Phishmoji</title>
+    <meta name="description" content="Can you guess the Phish song from the emojis?">
+    <meta property="og:title" content="Phishmoji - The Phish Emoji Game">
+    <meta property="og:description" content="Test your Phish knowledge! Can you guess the song from the emojis?">
+    <meta property="og:image" content="preview.png">
+    
+    <!-- App Icons and Theme -->
+    <link rel="icon" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="theme-color" content="#1a567b">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts, Styles, and Analytics -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="9021d8cc-6e35-4bdc-80da-5576646aecd2"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR-UNIQUE-ID-HERE"></script>
 </head>
 <body>
     <div class="game-container">
@@ -39,5 +54,14 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- Turn on the Service Worker for app installation -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js');
+        });
+      }
+    </script>
+</body>
 </body>
 </html>
