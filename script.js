@@ -393,7 +393,8 @@ function loadNewSong() {
   guessButton.disabled = false;
   messageDisplay.textContent = '';
   
-  // Manage button visibility
+// Manage button visibility
+  guessButton.style.display = 'inline-block'; // Add this line!
   nextButton.style.display = 'none';
   skipButton.style.display = 'inline-block';
   
@@ -413,9 +414,9 @@ function checkGuess() {
     messageDisplay.textContent = `Correct! The song was "${currentSong.title}".`;
     messageDisplay.style.color = '#2e7d32'; // Green
 
-    // Lock inputs and swap Skip for Next
+    // Lock inputs and swap buttons
     guessInput.disabled = true;
-    guessButton.disabled = true;
+    guessButton.style.display = 'none'; // Change from disabled to display: 'none'
     skipButton.style.display = 'none';
     nextButton.style.display = 'inline-block';
 
