@@ -125,3 +125,14 @@ p {
     30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
     40%, 60% { transform: translate3d(6px, 0, 0); }
 }
+/* Detach the suggestion form from the game card */
+.suggestion-container {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Optional: Make the inputs look cleaner for mobile */
+#submit-form input {
+    margin-bottom: 8px;
+}
