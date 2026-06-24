@@ -398,6 +398,7 @@ function loadNewSong() {
 // Manage button visibility
   guessButton.style.display = 'inline-block'; // Add this line!
   nextButton.style.display = 'none';
+  guessButton.disabled = false;
   skipButton.style.display = 'inline-block';
   
   guessInput.focus();
