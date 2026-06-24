@@ -341,7 +341,7 @@ const songData = [
   { "title": "Yarmouth Road", "aliases": ["yarmouth road"], "emojis": ["🛣️", "🐝🍯"] },
   { "title": "You Enjoy Myself", "aliases": ["you enjoy myself", "yem"], "emojis": ["👉😊🙋‍♂️", "👦👨👨‍🦱🎸🥁", "🗣️🍩🕺"] },
   { "title": "You Never Know", "aliases": ["you never know"], "emojis": ["🤷‍♂️🚫🧠"] },
-  { "title": "Your Pet Cat", "aliases": ["your pet cat"], "emojis": ["👉🐈", "🙀🌪️🐈"] }
+  { "title": "Your Pet Cat", "aliases": ["your pet cat"], "emojis": ["👉🐈", "🙀🌪️🐈"] },
   { "title": "Hold Your Head Up", "aliases": ["hold your head up", "hyhu"], "emojis": ["🙆‍♂️⬆️", "🦸‍♂️🔌🌪️"] },
   { "title": "Also Sprach Zarathustra", "aliases": ["also sprach zarathustra", "2001"], "emojis": ["👽🚀🌌", "2️⃣0️⃣0️⃣1️⃣"] },
   { "title": "Ya Mar", "aliases": ["ya mar"], "emojis": ["👴🚗", "🌴🥥🕺"] },
