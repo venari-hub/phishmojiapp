@@ -493,7 +493,7 @@ const suggestSongInput = document.getElementById('suggest-song');
 const suggestEmojiInput = document.getElementById('suggest-emoji');
 
 // PASTE YOUR FORMSPREE URL HERE:
-const formEndpoint = "https://formspree.io/f/YOUR_UNIQUE_ID_HERE";
+const formEndpoint = "https://formspree.io/f/xbdvdpvj";
 
 submitForm.addEventListener('submit', async function(event) {
     // Prevent the page from refreshing
