@@ -72,6 +72,9 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+#guess-btn {
+    background-color: #757575;
+}
 
 #skip-btn {
     background-color: #757575;
