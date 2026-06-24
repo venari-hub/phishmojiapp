@@ -422,16 +422,22 @@ function checkGuess() {
 
   } else {
     // INCORRECT GUESS
+    
+    // Only show the "lost" message if the streak was higher than 0
+    if (currentStreak > 0) {
+        messageDisplay.textContent = 'Nope, try again! (Streak lost)';
+    } else {
+        messageDisplay.textContent = 'Nope, try again!';
+    }
+    
     currentStreak = 0; 
-    scoreDisplay.textContent = currentStreak;
+    document.getElementById('streak').textContent = currentStreak;
     shareButton.style.display = 'none'; 
-
-    messageDisplay.textContent = 'Nope, try again! (Streak lost)';
     messageDisplay.style.color = '#d83b4e'; // Donut Red
     
-    // Trigger the "Shake" animation on the whole card
+    // Trigger the "Shake" animation
     gameContainer.classList.remove('shake-anim');
-    void gameContainer.offsetWidth; // Force reset
+    void gameContainer.offsetWidth; 
     gameContainer.classList.add('shake-anim');
     
     guessInput.value = '';
