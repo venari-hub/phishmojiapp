@@ -351,7 +351,6 @@ const guessButton = document.getElementById('guess-btn');
 const skipButton = document.getElementById('skip-btn');
 const messageDisplay = document.getElementById('message');
 const nextButton = document.getElementById('next-btn');
-const scoreDisplay = document.getElementById('score');
 const shareButton = document.getElementById('share-btn');
 
 // Game State Variables
