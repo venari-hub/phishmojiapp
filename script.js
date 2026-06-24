@@ -365,12 +365,14 @@ const guessButton = document.getElementById('guess-btn');
 const skipButton = document.getElementById('skip-btn');
 const messageDisplay = document.getElementById('message');
 const nextButton = document.getElementById('next-btn');
-const scoreDisplay = document.getElementById('score');
+const scoreDisplay = document.getElementById('streak');
 const shareButton = document.getElementById('share-btn');
 
 // Game State Variables
 let currentSong = null;
-let currentStreak = 0; 
+let currentStreak = 0;
+let highScore = parseInt(localStorage.getItem('phishmojiHighScore')) || 0;
+document.getElementById('high-score').textContent = highScore;
 
 // 2. Load a random song
 function loadNewSong() {
@@ -410,6 +412,11 @@ function checkGuess() {
     // CORRECT GUESS
     currentStreak++; 
     scoreDisplay.textContent = currentStreak;
+    if (currentStreak > highScore) {
+      highScore = currentStreak;
+      localStorage.setItem('phishmojiHighScore', highScore);
+      document.getElementById('high-score').textContent = highScore;
+    }
 
     messageDisplay.textContent = `Correct! The song was "${currentSong.title}".`;
     messageDisplay.style.color = '#2e7d32'; // Green
@@ -427,27 +434,29 @@ function checkGuess() {
 
   } else {
     // INCORRECT GUESS
+    if (currentStreak > 0) {
+        messageDisplay.textContent = 'Nope, try again! (Streak lost)';
+    } else {
+        messageDisplay.textContent = 'Nope, try again!';
+    }
+    // ----------------------
+    
     currentStreak = 0; 
     scoreDisplay.textContent = currentStreak;
     shareButton.style.display = 'none'; 
-
-    messageDisplay.textContent = 'Nope, try again! (Streak lost)';
     messageDisplay.style.color = '#d83b4e'; // Donut Red
     
-    // Trigger the "Shake" animation on the whole card
+    // Trigger the "Shake" animation
     gameContainer.classList.remove('shake-anim');
-    void gameContainer.offsetWidth; // Force reset
+    void gameContainer.offsetWidth; 
     gameContainer.classList.add('shake-anim');
     
     guessInput.value = '';
     guessInput.focus();
   }
-}
-
 // 4. Skip functionality
 function skipSong() {
-    currentStreak = 0; 
-    scoreDisplay.textContent = currentStreak;
+    document.getElementById('streak').textContent = currentStreak; 
     shareButton.style.display = 'none';
     loadNewSong();
 }
