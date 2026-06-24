@@ -24,6 +24,18 @@
         <button id="share-btn" style="display: none;">Share Streak 📱</button>
         
         <p>Score: <span id="score">0</span></p>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 2px solid #eee;">
+
+        <div>
+            <p style="font-size: 1rem; margin-bottom: 10px;">Got a better emoji combo?</p>
+            <form id="submit-form">
+                <input type="text" id="suggest-song" placeholder="Song Title" required style="width: 40%; font-size: 0.9rem;">
+                <input type="text" id="suggest-emoji" placeholder="Emojis" required style="width: 30%; font-size: 0.9rem;">
+                <button type="submit" id="submit-idea-btn" style="background-color: #2e7d32; font-size: 0.9rem;">Send</button>
+            </form>
+            <p id="form-status" style="font-size: 0.9rem; color: #2e7d32; display: none;">Thanks for the idea!</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
