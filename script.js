@@ -1,4 +1,6 @@
 const songData = [
+  // Paste ALL the objects from the batches here.
+  // Make sure there is a comma between each object!
   { "title": "46 Days", "aliases": ["46 days"], "emojis": ["4️⃣6️⃣🗓️", "🔥🏃‍♂️💨"] },
   { "title": "555", "aliases": ["555"], "emojis": ["5️⃣5️⃣5️⃣"] },
   { "title": "A Song I Heard the Ocean Sing", "aliases": ["a song i heard the ocean sing", "asihtos"], "emojis": ["🎵👂🌊🎤", "🌊👻🎸"] },
@@ -8,17 +10,20 @@ const songData = [
   { "title": "All of These Dreams", "aliases": ["all of these dreams"], "emojis": ["♾️💤💭"] },
   { "title": "All Things Reconsidered", "aliases": ["all things reconsidered", "atr"], "emojis": ["🤔🔄"] },
   { "title": "Alumni Blues", "aliases": ["alumni blues"], "emojis": ["🎓🔵🎵", "👨‍🎓📜🚫"] },
+  { "title": "Ambient Jam", "aliases": ["ambient jam"], "emojis": ["🌫️🎶", "🌌🎧"] },
   { "title": "Amidst the Peals of Laughter", "aliases": ["amidst the peals of laughter"], "emojis": ["😂🔔"] },
   { "title": "Anarchy", "aliases": ["anarchy"], "emojis": ["🛑💣"] },
   { "title": "And So To Bed", "aliases": ["and so to bed"], "emojis": ["➕➡️🛏️"] },
   { "title": "Anything But Me", "aliases": ["anything but me"], "emojis": ["🤷‍♂️🚫🙋‍♂️"] },
   { "title": "Army of One", "aliases": ["army of one"], "emojis": ["🪖1️⃣"] },
+  { "title": "Art Jam", "aliases": ["art jam"], "emojis": ["🎨🎶"] },
   { "title": "Ass Handed", "aliases": ["ass handed"], "emojis": ["🍑🤲", "🗓️🍑🤲"] },
   { "title": "Axilla", "aliases": ["axilla"], "emojis": ["🪓💪", "🔦💡👁️"] },
   { "title": "Axilla (Part II)", "aliases": ["axilla (part ii)", "axilla part ii", "axilla part 2", "axilla 2"], "emojis": ["🪓💪2️⃣"] },
   { "title": "Babylon is Burning", "aliases": ["babylon is burning"], "emojis": ["🏛️🔥"] },
   { "title": "Band/Crew Football Theme Song", "aliases": ["band/crew football theme song", "band crew football theme song"], "emojis": ["🎸👷‍♂️🏈🎵"] },
   { "title": "Bathtub Gin", "aliases": ["bathtub gin", "gin"], "emojis": ["🛁🍸", "🛁👨‍🎺", "👑🛀"] },
+  { "title": "Big Ball Jam", "aliases": ["big ball jam"], "emojis": ["🐘🏀🎶", "🧑‍🤝‍🧑🏀🙌"] },
   { "title": "Big Black Furry Creature from Mars", "aliases": ["big black furry creature from mars", "bbfcfm"], "emojis": ["🐘⬛🐻👽", "🤬🏃‍♂️💨"] },
   { "title": "Billy Breathes", "aliases": ["billy breathes"], "emojis": ["👦😮‍💨"] },
   { "title": "Birds of a Feather", "aliases": ["birds of a feather", "boatf", "birds"], "emojis": ["🐦🪶", "🧑‍🤝‍🧑🦅"] },
@@ -62,6 +67,7 @@ const songData = [
   { "title": "Demand", "aliases": ["demand"], "emojis": ["🗣️‼️", "🚗💥🎶"] },
   { "title": "Destiny Unbound", "aliases": ["destiny unbound"], "emojis": ["🔮⛓️‍💥", "🛣️🚗🎸"] },
   { "title": "Devotion to a Dream", "aliases": ["devotion to a dream"], "emojis": ["🙏💭"] },
+  { "title": "Digital Delay Loop Jam", "aliases": ["digital delay loop jam", "ddlj"], "emojis": ["💻⏳🔁🎶"] },
   { "title": "Dinner and a Movie", "aliases": ["dinner and a movie", "daam"], "emojis": ["🍽️➕🍿🎥", "👩‍🍳🔥"] },
   { "title": "Divided Sky", "aliases": ["divided sky", "the divided sky"], "emojis": ["➗🌌", "🌬️⛰️🪨", "🦅🌅"] },
   { "title": "Dog Faced Boy", "aliases": ["dog faced boy"], "emojis": ["🐶👦"] },
@@ -72,6 +78,7 @@ const songData = [
   { "title": "Don't Get Me Wrong", "aliases": ["don't get me wrong", "dont get me wrong"], "emojis": ["🚫🙅‍♂️❌"] },
   { "title": "Down with Disease", "aliases": ["down with disease", "disease", "dwd"], "emojis": ["⬇️🤒", "🛏️🕺🏥"] },
   { "title": "Dr. Gabel", "aliases": ["dr. gabel", "dr gabel"], "emojis": ["👨‍⚕️🩺"] },
+  { "title": "Drive-In Jam", "aliases": ["drive-in jam", "drive in jam"], "emojis": ["🚗🎥🎶"] },
   { "title": "Driver", "aliases": ["driver"], "emojis": ["🚘👨‍✈️"] },
   { "title": "Egg in a Hole", "aliases": ["egg in a hole"], "emojis": ["🥚🕳️"] },
   { "title": "Eliza", "aliases": ["eliza"], "emojis": ["👩🎶"] },
@@ -87,6 +94,7 @@ const songData = [
   { "title": "Fire Up the Ganja", "aliases": ["fire up the ganja"], "emojis": ["🔥🥦💨"] },
   { "title": "Fishman's Gull Poem", "aliases": ["fishman's gull poem", "fishmans gull poem"], "emojis": ["🐟👨🐦📜"] },
   { "title": "Flat Fee", "aliases": ["flat fee"], "emojis": ["➖💰"] },
+  { "title": "Flatbed Truck Jam", "aliases": ["flatbed truck jam"], "emojis": ["🛻🎶"] },
   { "title": "Fling Your Head", "aliases": ["fling your head"], "emojis": ["🤾‍♂️🗣️"] },
   { "title": "Flip", "aliases": ["flip"], "emojis": ["🔄"] },
   { "title": "Fluff's Travels", "aliases": ["fluff's travels", "fluffs travels"], "emojis": ["☁️🧳"] },
@@ -140,6 +148,7 @@ const songData = [
   { "title": "Infinite", "aliases": ["infinite"], "emojis": ["♾️"] },
   { "title": "Intro", "aliases": ["intro"], "emojis": ["🎬👋"] },
   { "title": "It's Ice", "aliases": ["it's ice", "its ice"], "emojis": ["🧊❄️", "🪞🕺⛸️"] },
+  { "title": "Jam", "aliases": ["jam"], "emojis": ["🍓🍞🎶"] },
   { "title": "Jennifer Dances", "aliases": ["jennifer dances"], "emojis": ["👩💃", "🍳🥓💃"] },
   { "title": "Joy", "aliases": ["joy"], "emojis": ["😂❤️", "👧☁️🙏"] },
   { "title": "Julius", "aliases": ["julius"], "emojis": ["🏛️👑", "🛑🚶‍♂️🔙"] },
@@ -175,6 +184,7 @@ const songData = [
   { "title": "Meatstick", "aliases": ["meatstick"], "emojis": ["🥩🥢", "🇯🇲🌭", "🧠💥"] },
   { "title": "Melt", "aliases": ["melt", "split open and melt", "soam"], "emojis": ["🫠", "🔪🫠"] },
   { "title": "Mercury", "aliases": ["mercury"], "emojis": ["🪐", "🐟🎣🕸️"] },
+  { "title": "Merry Pranksters Jam", "aliases": ["merry pranksters jam"], "emojis": ["🤡🚌🎶"] },
   { "title": "Metal Bagel Death", "aliases": ["metal bagel death"], "emojis": ["🤘🥯💀"] },
   { "title": "Mexican Cousin", "aliases": ["mexican cousin"], "emojis": ["🇲🇽👨‍👦", "🥃🌮🤢"] },
   { "title": "Mike's Song", "aliases": ["mike's song", "mikes song", "mikes"], "emojis": ["🎸👨🎵", "🚫🚪🔫"] },
@@ -217,6 +227,7 @@ const songData = [
   { "title": "Rock A William", "aliases": ["rock a william"], "emojis": ["🎸🧔"] },
   { "title": "Roggae", "aliases": ["roggae"], "emojis": ["🎪🤹", "🌠🎭"] },
   { "title": "Roll Like a Cantaloupe", "aliases": ["roll like a cantaloupe", "cantaloupe"], "emojis": ["🔄🍈"] },
+  { "title": "Rotation Jam", "aliases": ["rotation jam"], "emojis": ["🔄🎸🥁🎹"] },
   { "title": "Round Room", "aliases": ["round room"], "emojis": ["⭕🚪", "🚪📐❓"] },
   { "title": "Run Like an Antelope", "aliases": ["run like an antelope", "antelope"], "emojis": ["🏃‍♂️💨🦌", "⚙️🕹️", "🍅🧠"] },
   { "title": "Runaway Jim", "aliases": ["runaway jim", "jim"], "emojis": ["🐕🏃‍♂️", "🚗💼🐕"] },
@@ -251,6 +262,7 @@ const songData = [
   { "title": "Stealing Time From the Faulty Plan", "aliases": ["stealing time from the faulty plan", "stealing time", "stftfp"], "emojis": ["🥷⏳📝", "🧠💡📉"] },
   { "title": "Steam", "aliases": ["steam"], "emojis": ["♨️", "🐴♨️🐺"] },
   { "title": "Steep", "aliases": ["steep"], "emojis": ["🧗‍♂️⛰️"] },
+  { "title": "Storage Jam", "aliases": ["storage jam"], "emojis": ["📦🎶"] },
   { "title": "Strange Design", "aliases": ["strange design"], "emojis": ["👽📐", "🚗👴🛣️"] },
   { "title": "Stray Dog", "aliases": ["stray dog"], "emojis": ["🐕🛣️"] },
   { "title": "Sugar Shack", "aliases": ["sugar shack"], "emojis": ["🍬🛖"] },
@@ -303,6 +315,7 @@ const songData = [
   { "title": "Tide Turns", "aliases": ["tide turns"], "emojis": ["🌊🔄"] },
   { "title": "Timber", "aliases": ["timber", "timber (jerry the mule)", "jerry the mule"], "emojis": ["🪓🌲", "🐴🪓"] },
   { "title": "Tomorrow's Song", "aliases": ["tomorrow's song", "tomorrows song"], "emojis": ["⏩🎵"] },
+  { "title": "Tower Jam", "aliases": ["tower jam"], "emojis": ["🗼🎶"] },
   { "title": "Train Song", "aliases": ["train song"], "emojis": ["🚂🎵"] },
   { "title": "Trust Fund Baby", "aliases": ["trust fund baby"], "emojis": ["💰👶"] },
   { "title": "TTE", "aliases": ["time turns elastic", "tte"], "emojis": ["⏰🔄"] },
@@ -338,6 +351,7 @@ const songData = [
   { "title": "Wingsuit", "aliases": ["wingsuit"], "emojis": ["🪂🦅", "🕊️🧥"] },
   { "title": "Wolfman's Brother", "aliases": ["wolfman's brother", "wolfmans brother", "wolfman", "wolfmans"], "emojis": ["🐺👨👦", "☎️🚶‍♂️"] },
   { "title": "Wombat", "aliases": ["wombat"], "emojis": ["🦡", "📺👴🕺"] },
+  { "title": "Woodlands Jam", "aliases": ["woodlands jam"], "emojis": ["🌲🌳🎶"] },
   { "title": "Yarmouth Road", "aliases": ["yarmouth road"], "emojis": ["🛣️", "🐝🍯"] },
   { "title": "You Enjoy Myself", "aliases": ["you enjoy myself", "yem"], "emojis": ["👉😊🙋‍♂️", "👦👨👨‍🦱🎸🥁", "🗣️🍩🕺"] },
   { "title": "You Never Know", "aliases": ["you never know"], "emojis": ["🤷‍♂️🚫🧠"] },
@@ -351,13 +365,12 @@ const guessButton = document.getElementById('guess-btn');
 const skipButton = document.getElementById('skip-btn');
 const messageDisplay = document.getElementById('message');
 const nextButton = document.getElementById('next-btn');
+const scoreDisplay = document.getElementById('score');
 const shareButton = document.getElementById('share-btn');
 
 // Game State Variables
 let currentSong = null;
-let currentStreak = 0;
-let highScore = parseInt(localStorage.getItem('phishmojiHighScore')) || 0;
-document.getElementById('high-score').textContent = highScore;
+let currentStreak = 0; 
 
 // 2. Load a random song
 function loadNewSong() {
@@ -396,15 +409,7 @@ function checkGuess() {
   if (currentSong.aliases.includes(userGuess)) {
     // CORRECT GUESS
     currentStreak++; 
-    document.getElementById('streak').textContent = currentStreak;
-
-    // --- ADD THIS BLOCK ---
-    if (currentStreak > highScore) {
-      highScore = currentStreak;
-      localStorage.setItem('phishmojiHighScore', highScore);
-      document.getElementById('high-score').textContent = highScore;
-    }
-    // ----------------------
+    scoreDisplay.textContent = currentStreak;
 
     messageDisplay.textContent = `Correct! The song was "${currentSong.title}".`;
     messageDisplay.style.color = '#2e7d32'; // Green
@@ -422,22 +427,16 @@ function checkGuess() {
 
   } else {
     // INCORRECT GUESS
-    
-    // Only show the "lost" message if the streak was higher than 0
-    if (currentStreak > 0) {
-        messageDisplay.textContent = 'Nope, try again! (Streak lost)';
-    } else {
-        messageDisplay.textContent = 'Nope, try again!';
-    }
-    
     currentStreak = 0; 
-    document.getElementById('streak').textContent = currentStreak;
+    scoreDisplay.textContent = currentStreak;
     shareButton.style.display = 'none'; 
+
+    messageDisplay.textContent = 'Nope, try again! (Streak lost)';
     messageDisplay.style.color = '#d83b4e'; // Donut Red
     
-    // Trigger the "Shake" animation
+    // Trigger the "Shake" animation on the whole card
     gameContainer.classList.remove('shake-anim');
-    void gameContainer.offsetWidth; 
+    void gameContainer.offsetWidth; // Force reset
     gameContainer.classList.add('shake-anim');
     
     guessInput.value = '';
@@ -448,7 +447,7 @@ function checkGuess() {
 // 4. Skip functionality
 function skipSong() {
     currentStreak = 0; 
-    document.getElementById('streak').textContent = currentStreak; // Changed from scoreDisplay
+    scoreDisplay.textContent = currentStreak;
     shareButton.style.display = 'none';
     loadNewSong();
 }
