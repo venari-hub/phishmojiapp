@@ -133,6 +133,6 @@ p {
 }
 
 /* Optional: Make the inputs look cleaner for mobile */
-#submit-form input {
+.submit-form input {
     margin-bottom: 8px;
 }
