@@ -485,3 +485,49 @@ guessInput.addEventListener('keypress', function(event) {
 
 // 7. Start the game
 loadNewSong();
+// --- SUBMISSION FORM LOGIC ---
+
+const submitForm = document.getElementById('submit-form');
+const formStatus = document.getElementById('form-status');
+const suggestSongInput = document.getElementById('suggest-song');
+const suggestEmojiInput = document.getElementById('suggest-emoji');
+
+// PASTE YOUR FORMSPREE URL HERE:
+const formEndpoint = "https://formspree.io/f/YOUR_UNIQUE_ID_HERE";
+
+submitForm.addEventListener('submit', async function(event) {
+    // Prevent the page from refreshing
+    event.preventDefault();
+
+    // Gather the data
+    const formData = new FormData();
+    formData.append('Song Title', suggestSongInput.value);
+    formData.append('Suggested Emojis', suggestEmojiInput.value);
+
+    try {
+        // Send the data to Formspree silently
+        const response = await fetch(formEndpoint, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            // Success: clear inputs and show the thank you message
+            suggestSongInput.value = '';
+            suggestEmojiInput.value = '';
+            formStatus.style.display = 'block';
+            
+            // Hide the message again after 3 seconds
+            setTimeout(() => {
+                formStatus.style.display = 'none';
+            }, 3000);
+        } else {
+            alert("Oops! There was a problem submitting your idea.");
+        }
+    } catch (error) {
+        alert("Network error. Please try again later.");
+    }
+});
