@@ -562,22 +562,26 @@ function checkGuess() {
 
 // 4. Skip functionality
 function skipSong() {
+    // Lock the inputs and swap buttons to show the "Next Song" state
+    guessInput.disabled = true;
+    guessButton.style.display = 'none';
+    skipButton.style.display = 'none';
+    nextButton.style.display = 'inline-block';
+
     if (skipsRemaining > 0) {
-        // Player still has skips! Deduct one and load a new song.
+        // Player still has skips! Deduct one.
         skipsRemaining--;
         document.getElementById('skips-left').textContent = skipsRemaining;
+        
+        // Show the answer to the user in a neutral color
+        messageDisplay.textContent = `Skipped! The song was "${currentSong.title}".`;
+        messageDisplay.style.color = '#444'; 
         
         if (window.umami) {
             umami.track('Used Skip', { song: currentSong.title, skipsLeft: skipsRemaining });
         }
-        
-        loadNewSong();
     } else {
         // Player is out of skips. The streak is lost!
-        if (window.umami) {
-            umami.track('Streak Lost on Skip', { song: currentSong.title });
-        }
-        
         currentStreak = 0; 
         skipsRemaining = 3; // Reset skips for the new run
         
@@ -585,8 +589,17 @@ function skipSong() {
         document.getElementById('skips-left').textContent = skipsRemaining;
         shareButton.style.display = 'none';
         
-        loadNewSong();
+        // Show the answer and warn them they lost their streak
+        messageDisplay.textContent = `Out of skips! The song was "${currentSong.title}". (Streak lost)`;
+        messageDisplay.style.color = '#d83b4e'; // Red
+        
+        if (window.umami) {
+            umami.track('Streak Lost on Skip', { song: currentSong.title });
+        }
     }
+    
+    // Automatically focus the "Next Song" button so they can just press Enter
+    nextButton.focus();
 }
 
 // 5. Social Sharing
