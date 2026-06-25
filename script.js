@@ -454,10 +454,19 @@ const shareButton = document.getElementById('share-btn');
 
 // State Variables
 let currentSong = null;
-let currentStreak = 0; 
+let currentStreak = 0;
+let skipsRemaining = 3;
 let highScore = parseInt(localStorage.getItem('phishmojiHighScore')) || 0;
 document.getElementById('high-score').textContent = highScore;
 
+// Helper to update the Skip button text
+function updateSkipButtonUI() {
+    if (skipsRemaining > 0) {
+        skipButton.textContent = `Skip (${skipsRemaining})`;
+    } else {
+        skipButton.textContent = 'Skip (Lose Streak)';
+    }
+}
 // 2. Load a random song
 function loadNewSong() {
   const randomSongIndex = Math.floor(Math.random() * songData.length);
@@ -480,6 +489,7 @@ function loadNewSong() {
   
   nextButton.style.display = 'none';
   skipButton.style.display = 'inline-block';
+  updateSkipButtonUI();
   messageDisplay.textContent = '';
   
   guessInput.focus();
@@ -532,7 +542,11 @@ function checkGuess() {
     }
     
     currentStreak = 0; 
+    skipsRemaining = 3; // Reset skips for the new run
+    
     document.getElementById('streak').textContent = currentStreak;
+    document.getElementById('skips-left').textContent = skipsRemaining; // Update UI
+    
     shareButton.style.display = 'none'; 
     messageDisplay.style.color = '#d83b4e'; 
     
@@ -542,22 +556,37 @@ function checkGuess() {
     
     guessInput.value = '';
     guessInput.focus();
+    updateSkipButtonUI();
   }
 }
 
 // 4. Skip functionality
 function skipSong() {
-    // --- ADDED: Analytics Tracking (Skip Song) ---
-    if (window.umami) {
-        umami.track('Skip Song', { 
-            song: currentSong.title 
-        });
+    if (skipsRemaining > 0) {
+        // Player still has skips! Deduct one and load a new song.
+        skipsRemaining--;
+        document.getElementById('skips-left').textContent = skipsRemaining;
+        
+        if (window.umami) {
+            umami.track('Used Skip', { song: currentSong.title, skipsLeft: skipsRemaining });
+        }
+        
+        loadNewSong();
+    } else {
+        // Player is out of skips. The streak is lost!
+        if (window.umami) {
+            umami.track('Streak Lost on Skip', { song: currentSong.title });
+        }
+        
+        currentStreak = 0; 
+        skipsRemaining = 3; // Reset skips for the new run
+        
+        document.getElementById('streak').textContent = currentStreak;
+        document.getElementById('skips-left').textContent = skipsRemaining;
+        shareButton.style.display = 'none';
+        
+        loadNewSong();
     }
-
-    currentStreak = 0; 
-    document.getElementById('streak').textContent = currentStreak;
-    shareButton.style.display = 'none';
-    loadNewSong();
 }
 
 // 5. Social Sharing
